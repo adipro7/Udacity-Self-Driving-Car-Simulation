@@ -2,12 +2,9 @@
 Source Code of Udacity Self Driving Car Simulation on the simulator provided by Udacity on Seaside, Mountain and Jungle Track.
 ## Description:
 ### Files:
-.h5 files are the saved models which I have already trained.
-
-.ipynb is the source code of the trained model.
-
-drive.py and related drive named files are the files that will move the car in the simulator.
-
+##### .h5 files are the saved models which I have already trained.
+##### car_model2(i).ipynb is the source code of the trained model.
+##### drive.py and related drive named files are the files that will move the car in the simulator.
 ### Model[car_model2(i).ipynb]:
 #### DataSet Collection:
 Each Model has been trained with different parameters to obtain the best possible accuracy. However, I could not upload the dataset due to its large size in Gigabytes! 
@@ -31,17 +28,14 @@ After the convolutional layers Flattening layer is made and 3 Dense layers are c
 ##### generator function:
 A generator function is made to run the model in order to consume less time and less memory. You can do without the generator function also but it would be inefficient to do so. The basic difference in a with generator and without generator model is that in a with generator model, a batch of image is taken and preprocess(ata augemtation) where as in a without generator model all the images are taken in 1 batch and preprocessed.
 ##### Optimizer Used: Adam Optimizer.
-
 ### Driving File(drive.py files):
 You can read about this file in the Udacity Web site as it is a default file. However, let me mention certain changes which I have made in this. I have added a class SimplePI Controller that implements PID Mechanism to control the speed of the car and make it move smoothly at a constant speed. Rest code remains the same.
-
 ### To run the Model:
 1. Clone the repo.
 ###### git clone https://github.com/adipro7/Udacity-Self-Driving-Car-Simulation.git
 2. Convert the ipynb file to .py file. Go to the jupyter notebook->files.
 3. Run the following command:
 ###### python <drive_file_to_be_executed> <model_to_be_executed>
-eg:
+eg: 
 ###### python car_model2(i).py model1.h5
-
-Remember to the car_model2(i) file with appropriate file names which you want to run.
+## Remember to change the car_model2(i) file with appropriate file names which you want to run.
